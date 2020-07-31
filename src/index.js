@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './styles.module.css'
 import { createRef } from 'react';
 
-export class DragInertia extends React.Component{
+export default class DragInertia extends React.Component{
 
   constructor(props){
     super(props);
