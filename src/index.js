@@ -93,7 +93,6 @@ export default class DragInertia extends React.Component{
 
    const differenceX = e.clientX-this.state.posX;
    const differenceY = e.clientY- this.state.posY;
-   console.log(this.state.posX+ " and "+this.state.posY);
    this.setState({clicked:true,difX:differenceX,difY:differenceY});
    this.moving;
 
@@ -116,6 +115,7 @@ export default class DragInertia extends React.Component{
     mouseArrayY= this.state.lastMouseY;
     if(!isNaN(firstMouseX)){mouseArrayY.push(firstMouseY);}
     this.setState({posX:newX, posY:newY,lastMouseX:mouseArrayX,lastMouseY:mouseArrayY});
+    console.log(this.state.posX+ " and "+this.state.posY);
 
  }
 

@@ -1,20 +1,11 @@
 body{
   background-color:lightyellow;
 }
-.firstBox{
+
+.drag{
   position:absolute;
-  height:10vw;
-  width:10vw;
-  background-color: tomato;
-  left:500px;
-}
-
-.secondBox{
-
-   position:absolute;
-   height:10vw;
-   width:10vw;
-   border-radius:50%;
-   background-color:pink;
-
+  height:20vw;
+  width:20vw;
+  border-radius:50%;
+  background-color:brown;
 }
