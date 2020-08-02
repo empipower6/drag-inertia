@@ -1,6 +1,6 @@
 {
   "name": "draginertia",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A draggable component with an inertia effect.",
   "author": "https://github.com/empipower6",
   "license": "MIT",
