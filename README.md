@@ -35,12 +35,14 @@ class Example extends React.Component {
 
 ## Details
 
--You can use DragInertia by inserting your draggable object inside the tags <DragInertia> </DragInertia> as you can see above.
+-You can use DragInertia by inserting your draggable object inside the tags** <DragInertia> </DragInertia>** as you can see above.
 
--You can set the inertiaPower;
-   - inertiaPower={1}, 1 being the lowest possible inertia applied to the object .
-   - inertiaPower={5}, 5 being the highest possible inertia applied to the object.
-   - If no entries, by default inertiaPower will be taken as 1.
+-You can set the **inertiaPower**;
+   - **inertiaPower={1}**, 1 being the lowest possible inertia applied to the object .
+   - **inertiaPower={5}**, 5 being the highest possible inertia applied to the object.
+   - If no entries, by **default** inertiaPower will be taken as **1**.
+
+-DragInertia is set to **position:absolute** by default to be able to use left and top positioning.
 
 I hope you enjoy it! :)
 ## License
