@@ -23,7 +23,7 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
   },
-  "peerDependencies": {
+  "dependencies": {
     "react": "^16.0.0"
   },
   "devDependencies": {
