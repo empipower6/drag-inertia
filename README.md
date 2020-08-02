@@ -22,7 +22,7 @@ class Example extends React.Component {
   return (
    <>
     <DragInertia inertiaPower={4}><div className="redSquare"></div></DragInertia>
-    <DragInertia inertiaPower={2}><div className="tomatoSquare"></div></DragInertia>
+    <DragInertia inertiaPower={2}><div className="tomatoCircle"></div></DragInertia>
    </>
   )
  }
