@@ -9,3 +9,9 @@ body{
   border-radius:50%;
   background-color:brown;
 }
+
+.square{
+  background-color:tomato;
+  left:20px;
+  z-index:99;
+}

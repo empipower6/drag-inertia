@@ -20,6 +20,7 @@ export default class DragInertia extends React.Component{
 
 
     window.addEventListener('mouseup',()=>{this.state.clicked? this.mouseDown: null;},false);
+    window.addEventListener('mousemove',()=>{console.log("moving");},false);
 
 
 
@@ -31,11 +32,13 @@ export default class DragInertia extends React.Component{
    this.setState({posX:rect_X,posY:rect_Y, boxWidth:rect_width, boxHeight:rect_height});
  }
  inertia(lastX,lastY){
+
    const xLength= this.state.lastMouseX.length;
    const yLength= this.state.lastMouseY.length;
    let lastDifX= this.state.lastMouseX[xLength-1]-this.state.lastMouseX[xLength-2];
    let lastDifY= this.state.lastMouseY[yLength-1]-this.state.lastMouseY[yLength-2];
    let divide= Math.round(Math.sqrt(Math.pow(lastDifX,2)+Math.pow(lastDifY,2)));
+   if(divide==0){divide=1;}
    let incX=-1*lastDifX/divide;
    let incY=-1*lastDifY/divide;
    if(isNaN(incX)){incX=-1;}
@@ -80,12 +83,13 @@ export default class DragInertia extends React.Component{
 
 
 
-   this.setState({lastMouseX:[],lastMouseY:[]});
  }
  mouseUp(e){
 
  this.setState({clicked:false});
- if(this.state.lastMouseX.length>0 && this.state.lastMouseY.length>0){if(this.props.inertiaPower!==0){this.inertia(e.clientX,e.clientY);}}
+ console.log(this.state.lastMouseX);
+ if(this.state.lastMouseX.length>1 && this.state.lastMouseY.length>1){if(this.props.inertiaPower!==0){this.inertia(e.clientX,e.clientY);}}
+ this.setState({lastMouseX:[],lastMouseY:[]});
 
 
  }
@@ -93,8 +97,8 @@ export default class DragInertia extends React.Component{
 
    const differenceX = e.clientX-this.state.posX;
    const differenceY = e.clientY- this.state.posY;
+
    this.setState({clicked:true,difX:differenceX,difY:differenceY});
-   this.moving;
 
  }
 
@@ -104,8 +108,8 @@ export default class DragInertia extends React.Component{
 
    const newX = e.clientX - this.state.difX;
    const newY = e.clientY - this.state.difY;
-
-
+   if(isNaN(newY)){console.log("newY is NaN");}
+   console.log(e.clientX);
     const firstMouseX = e.clientX;
     const firstMouseY = e.clientY;
     let mouseArrayX =[];
@@ -114,8 +118,11 @@ export default class DragInertia extends React.Component{
     if(!isNaN(firstMouseX)){mouseArrayX.push(firstMouseX);}
     mouseArrayY= this.state.lastMouseY;
     if(!isNaN(firstMouseX)){mouseArrayY.push(firstMouseY);}
-    this.setState({posX:newX, posY:newY,lastMouseX:mouseArrayX,lastMouseY:mouseArrayY});
-    console.log(this.state.posX+ " and "+this.state.posY);
+
+    if(!isNaN(newY)){
+
+      this.setState({posX:newX, posY:newY,lastMouseX:mouseArrayX,lastMouseY:mouseArrayY});}
+    //console.log(this.state.posX+ " and "+this.state.posY);
 
  }
 
