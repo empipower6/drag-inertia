@@ -1,5 +1,5 @@
 {
-  "name": "drag-inertia",
+  "name": "dragInertia",
   "version": "1.3.0",
   "description": "A draggable component with an inertia effect.",
   "author": "https://github.com/empipower6",
