@@ -13,7 +13,7 @@ export default class DragInertia extends React.Component{
     this.inertia = this.inertia.bind(this);
     this.inertiaPower = this.props.inertiaPower;
 
-    const dragObj= createRef(null);
+    this.dragObj= createRef(null);
   }
 
  componentDidMount(){
