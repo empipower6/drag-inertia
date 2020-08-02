@@ -1,10 +1,10 @@
 {
-  "name": "draginertia",
+  "name": "drag-inertia",
   "version": "1.2.2",
   "description": "A draggable component with an inertia effect.",
   "author": "https://github.com/empipower6",
   "license": "MIT",
-  "repository": "https://github.com/empipower6/draginertia",
+  "repository": "https://github.com/empipower6/drag-inertia",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
