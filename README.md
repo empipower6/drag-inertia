@@ -18,15 +18,14 @@ import React from 'react'
 import DragInertia from 'draginertia'
 
 class Example extends React.Component {
-  render() {
-    return (
-        <>
-        <DragInertia inertiaPower={4}><div className="redSquare"></div></DragInertia>
-        <DragInertia inertiaPower={2}><div className="tomatoSquare"></div></DragInertia>
-
-        </>
-    )
-  }
+ render() {
+  return (
+   <>
+    <DragInertia inertiaPower={4}><div className="redSquare"></div></DragInertia>
+    <DragInertia inertiaPower={2}><div className="tomatoSquare"></div></DragInertia>
+   </>
+  )
+ }
 }
 ```
 ## DEMO
