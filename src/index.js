@@ -124,7 +124,7 @@ export default class DragInertia extends React.Component{
 
        return(
 
-        <div ref={el=> this.dragObj =el} className={styles.box} style={{left:this.state.posX+`px`,top:this.state.posY+`px`,position:absolute,transition :all}} onMouseDown={this.mouseDown} onMouseOut={this.state.clicked ? this.moving:null} onMouseUp={this.mouseUp} onMouseMove={this.state.clicked ? this.moving:null}  > {this.props.children}</div>
+        <div ref={el=> this.dragObj =el} className={styles.box} style={{left:this.state.posX+`px`,top:this.state.posY+`px`,position:'absolute',transition :'all'}} onMouseDown={this.mouseDown} onMouseOut={this.state.clicked ? this.moving:null} onMouseUp={this.mouseUp} onMouseMove={this.state.clicked ? this.moving:null}  > {this.props.children}</div>
 
       )
    }
