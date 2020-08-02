@@ -19,8 +19,8 @@ export default class DragInertia extends React.Component{
  componentDidMount(){
 
 
-    window.addEventListener('mouseup',()=>{this.state.clicked? this.mouseDown: null;},false);
-    window.addEventListener('mousemove',()=>{console.log("moving");},false);
+    window.addEventListener('click',()=>{this.setState({clicked:false})},false);
+    window.addEventListener('mousemove',()=>{this.state.clicked? this.moving: this.mouseDown},false);
 
 
 

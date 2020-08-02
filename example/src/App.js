@@ -7,6 +7,8 @@ const App = () => {
 
   return (
       <>
+      <h1> Hello everyone! </h1>
+      <p> My name is Emre </p>
       <DragInertia inertiaPower={4}><div className="drag"></div></DragInertia>
       <DragInertia inertiaPower={5}><div className="drag square"></div></DragInertia>
 
