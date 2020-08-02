@@ -35,7 +35,7 @@ class Example extends React.Component {
 
 ## Details
 
--You can use DragInertia by inserting your draggable object inside the tags ** <DragInertia> </DragInertia> ** as you can see above.
+-You can use DragInertia by inserting your draggable object inside the tags <DragInertia> </DragInertia> as you can see above.
 
 -You can set the **inertiaPower**;
    - **inertiaPower={1}**, 1 being the lowest possible inertia applied to the object .
